@@ -11,7 +11,7 @@ import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
 
 @Entity
 @Table(name = "tb_enrollment") 
-public class Enrollment { 
+public class Enrollment {   
 	
 	@EmbeddedId
 	private EnrollmentPK id = new EnrollmentPK();
@@ -19,7 +19,7 @@ public class Enrollment {
 	private Instant enrollMoment;
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant refundMoment;
-	private boolean avaliable;
+	private boolean available;
 	private boolean onlyUpdate;
 
 	public Enrollment() {
@@ -33,7 +33,7 @@ public class Enrollment {
 		id.setOffer(offer);
 		this.enrollMoment = enrollMoment;
 		this.refundMoment = refundMoment;
-		this.avaliable = avaliable;
+		this.available = avaliable;
 		this.onlyUpdate = onlyUpdate;
 	}
 
@@ -70,11 +70,11 @@ public class Enrollment {
 	}
 
 	public boolean isAvaliable() {
-		return avaliable;
+		return available;
 	}
 
 	public void setAvaliable(boolean avaliable) {
-		this.avaliable = avaliable;
+		this.available = avaliable;
 	}
 
 	public boolean isOnlyUpdate() {
