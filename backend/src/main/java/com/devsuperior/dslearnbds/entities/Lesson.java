@@ -18,7 +18,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_lesson")
+@Table(name = "tb_lesson")     
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Lesson implements Serializable {      
 
@@ -28,7 +28,7 @@ public abstract class Lesson implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
-	private Integer position;
+	private Integer position; 
 
 	
 	@ManyToOne
